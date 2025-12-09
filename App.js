@@ -1,20 +1,44 @@
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, ScrollView, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './src/screens/HomeScreen';
+import DeviceControlScreen from './src/screens/DeviceControlScreen';
+import SensorScreen from './src/screens/SensorScreen';
+import NavigationBar from './src/components/NavigationBar';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('home');
+
+  const renderScreen = () => {
+    switch (currentScreen) {
+      case 'home':
+        return <HomeScreen onNavigate={setCurrentScreen} />;
+      case 'devices':
+        return <DeviceControlScreen onNavigate={setCurrentScreen} />;
+      case 'sensors':
+        return <SensorScreen onNavigate={setCurrentScreen} />;
+      default:
+        return <HomeScreen onNavigate={setCurrentScreen} />;
+    }
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
-    </View>
+      <View style={styles.content}>
+        {renderScreen()}
+      </View>
+      <NavigationBar currentScreen={currentScreen} onNavigate={setCurrentScreen} />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
+  },
+  content: {
+    flex: 1,
   },
 });
