@@ -8,61 +8,6 @@ class ApiService {
     this.sensors = this.initializeSensors();
   }
 
-  initializeDevices() {
-    return [
-      {
-        id: '1',
-        name: 'Salon Işıkları',
-        type: 'light',
-        status: false,
-        icon: '💡',
-        room: 'Salon',
-      },
-      {
-        id: '2',
-        name: 'Yatak Odası Işıkları',
-        type: 'light',
-        status: true,
-        icon: '💡',
-        room: 'Yatak Odası',
-      },
-      {
-        id: '3',
-        name: 'Klima',
-        type: 'ac',
-        status: false,
-        icon: '❄️',
-        room: 'Salon',
-        temperature: 22,
-      },
-      {
-        id: '4',
-        name: 'Güvenlik Sistemi',
-        type: 'security',
-        status: true,
-        icon: '🔒',
-        room: 'Genel',
-      },
-      {
-        id: '5',
-        name: 'Perdeler',
-        type: 'curtain',
-        status: false,
-        icon: '🪟',
-        room: 'Salon',
-        position: 0,
-      },
-      {
-        id: '6',
-        name: 'Mutfak Işıkları',
-        type: 'light',
-        status: false,
-        icon: '💡',
-        room: 'Mutfak',
-      },
-    ];
-  }
-
   initializeSensors() {
     return [
       {
@@ -99,15 +44,6 @@ class ApiService {
         unit: 'ppm',
         icon: '⛽',
         room: 'Mutfak',
-        timestamp: new Date().toISOString(),
-      },
-      {
-        id: '5',
-        name: 'Işık Seviyesi',
-        value: 750,
-        unit: 'lux',
-        icon: '☀️',
-        room: 'Salon',
         timestamp: new Date().toISOString(),
       },
     ];

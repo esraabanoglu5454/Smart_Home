@@ -80,33 +80,7 @@ const SensorScreen = ({ onNavigate }) => {
         </TouchableOpacity>
       </View>
 
-      {/* Oda Filtresi */}
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.filterContainer}
-        contentContainerStyle={styles.filterContent}
-      >
-        {rooms.map(room => (
-          <TouchableOpacity
-            key={room}
-            style={[
-              styles.filterButton,
-              selectedRoom === room && styles.filterButtonActive,
-            ]}
-            onPress={() => setSelectedRoom(room)}
-          >
-            <Text
-              style={[
-                styles.filterText,
-                selectedRoom === room && styles.filterTextActive,
-              ]}
-            >
-              {room === 'all' ? 'Tümü' : room}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+     
 
       {loading ? (
         <View style={styles.loadingContainer}>

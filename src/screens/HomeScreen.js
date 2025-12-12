@@ -71,10 +71,10 @@ const HomeScreen = ({ onNavigate }) => {
         <>
           {/* İstatistikler */}
           <View style={styles.statsContainer}>
-            <View style={styles.statCard}>
+            {/* <View style={styles.statCard}>
               <Text style={styles.statValue}>{activeDevices}/{totalDevices}</Text>
               <Text style={styles.statLabel}>Aktif Cihazlar</Text>
-            </View>
+            </View> */}
             <View style={styles.statCard}>
               <Text style={styles.statValue}>{sensors.length}</Text>
               <Text style={styles.statLabel}>Sensörler</Text>
@@ -90,7 +90,7 @@ const HomeScreen = ({ onNavigate }) => {
                 onPress={() => onNavigate('devices')}
               >
                 <Text style={styles.quickIcon}>⚙️</Text>
-                <Text style={styles.quickLabel}>Cihazlar</Text>
+                <Text style={styles.quickLabel}>Modlar</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.quickButton}
@@ -102,27 +102,9 @@ const HomeScreen = ({ onNavigate }) => {
             </View>
           </View>
 
-          {/* Aktif Cihazlar */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Aktif Cihazlar</Text>
-            {devices
-              .filter(device => device.status)
-              .slice(0, 3)
-              .map(device => (
-                <DeviceCard
-                  key={device.id}
-                  device={device}
-                  onToggle={() => handleToggleDevice(device.id)}
-                />
-              ))}
-            {devices.filter(device => device.status).length === 0 && (
-              <Text style={styles.emptyText}>Aktif cihaz yok</Text>
-            )}
-          </View>
-
           {/* Son Sensör Verileri */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Son Sensör Verileri</Text>
+            <Text style={styles.sectionTitle}>Aktif Cihazlar</Text>
             {sensors.slice(0, 3).map(sensor => (
               <SensorCard key={sensor.id} sensor={sensor} />
             ))}
