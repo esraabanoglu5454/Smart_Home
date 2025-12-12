@@ -4,7 +4,7 @@
 class ApiService {
   constructor() {
     this.baseUrl = 'https://api.akilliev.local'; // Mock URL
-    this.devices = this.initializeDevices();
+    // this.devices = this.initializeDevices();
     this.sensors = this.initializeSensors();
   }
 
@@ -16,7 +16,7 @@ class ApiService {
         value: 23.5,
         unit: '°C',
         icon: '🌡️',
-        room: 'Salon',
+        room: 'Odalar',
         timestamp: new Date().toISOString(),
       },
       {
@@ -25,7 +25,7 @@ class ApiService {
         value: 45,
         unit: '%',
         icon: '💧',
-        room: 'Salon',
+        room: 'Odalar',
         timestamp: new Date().toISOString(),
       },
       {
@@ -33,8 +33,8 @@ class ApiService {
         name: 'Hareket Sensörü',
         value: false,
         unit: '',
-        icon: '👁️',
-        room: 'Giriş',
+        icon: '💃🏼',
+        room: 'Ana Kapı',
         timestamp: new Date().toISOString(),
       },
       {

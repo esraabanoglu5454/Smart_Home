@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const NavigationBar = ({ currentScreen, onNavigate }) => {
   const navItems = [
-    { id: 'home', label: 'Ana Sayfa', icon: '🏠' },
-    { id: 'devices', label: 'Modlar', icon: '⚙️' },
-    { id: 'sensors', label: 'Sensörler', icon: '📊' },
+    { id: 'home', label: 'Ana Sayfa', icon: '🏛️' },
+    { id: 'devices', label: 'Modlar', icon: ' 🎮 ' },
+    { id: 'sensors', label: 'Sensörler', icon: '🎛️' },
   ];
 
   return (

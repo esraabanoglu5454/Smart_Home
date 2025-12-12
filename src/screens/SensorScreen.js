@@ -70,14 +70,6 @@ const SensorScreen = ({ onNavigate }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Sensör Verileri</Text>
-        <TouchableOpacity
-          style={styles.autoRefreshButton}
-          onPress={() => setAutoRefresh(!autoRefresh)}
-        >
-          <Text style={styles.autoRefreshText}>
-            {autoRefresh ? '🔄 Otomatik' : '⏸️ Duraklatıldı'}
-          </Text>
-        </TouchableOpacity>
       </View>
 
      

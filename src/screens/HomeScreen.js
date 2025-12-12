@@ -48,8 +48,8 @@ const HomeScreen = ({ onNavigate }) => {
     loadData();
   };
 
-  const activeDevices = devices.filter(d => d.status).length;
-  const totalDevices = devices.length;
+  // const activeDevices = devices.filter(d => d.status).length;
+  // const totalDevices = devices.length;
 
   return (
     <ScrollView
@@ -59,7 +59,7 @@ const HomeScreen = ({ onNavigate }) => {
       }
     >
       <View style={styles.header}>
-        <Text style={styles.title}>Akıllı Ev</Text>
+        <Text style={styles.title}>ABANSHOW</Text>
       </View>
 
       {loading ? (
@@ -69,16 +69,16 @@ const HomeScreen = ({ onNavigate }) => {
       ) : (
         <>
           {/* İstatistikler */}
-          <View style={styles.statsContainer}>
+          {/* <View style={styles.statsContainer}> */}
             {/* <View style={styles.statCard}>
               <Text style={styles.statValue}>{activeDevices}/{totalDevices}</Text>
               <Text style={styles.statLabel}>Aktif Cihazlar</Text>
             </View> */}
-            <View style={styles.statCard}>
+            {/* <View style={styles.statCard}>
               <Text style={styles.statValue}>{sensors.length}</Text>
               <Text style={styles.statLabel}>Sensörler</Text>
             </View>
-          </View>
+          </View> */}
 
           {/* Hızlı Erişim */}
           <View style={styles.section}>
@@ -88,14 +88,14 @@ const HomeScreen = ({ onNavigate }) => {
                 style={styles.quickButton}
                 onPress={() => onNavigate('devices')}
               >
-                <Text style={styles.quickIcon}>⚙️</Text>
+                <Text style={styles.quickIcon}>🎮</Text>
                 <Text style={styles.quickLabel}>Modlar</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.quickButton}
                 onPress={() => onNavigate('sensors')}
               >
-                <Text style={styles.quickIcon}>📊</Text>
+                <Text style={styles.quickIcon}>🎛️</Text>
                 <Text style={styles.quickLabel}>Sensörler</Text>
               </TouchableOpacity>
             </View>
