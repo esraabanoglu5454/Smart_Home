@@ -60,7 +60,6 @@ const HomeScreen = ({ onNavigate }) => {
     >
       <View style={styles.header}>
         <Text style={styles.title}>Akıllı Ev</Text>
-        <Text style={styles.subtitle}>Hoş geldiniz</Text>
       </View>
 
       {loading ? (

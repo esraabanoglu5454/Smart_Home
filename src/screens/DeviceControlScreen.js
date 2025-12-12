@@ -344,7 +344,6 @@ const ModesScreen = ({ onNavigate }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Modlar</Text>
-        <Text style={styles.subtitle}>Akıllı ev otomasyonu</Text>
       </View>
 
       {loading ? (
