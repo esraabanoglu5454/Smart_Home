@@ -36,7 +36,7 @@ const ModesScreen = ({ onNavigate }) => {
       actions: [
         'Hareket algılandığında bildirim gönder',
         'Tüm ışıkları kapat',
-        'Klimaları düşük güç moduna al'
+        
       ]
     },
     {
@@ -49,7 +49,7 @@ const ModesScreen = ({ onNavigate }) => {
       actions: [
         'Tüm ışıkları kapat',
         'Perdeleri kapat',
-        'Klimayı uyku moduna al (23°C)'
+        
       ]
     },
     {
@@ -66,19 +66,6 @@ const ModesScreen = ({ onNavigate }) => {
       ]
     },
     {
-      id: 'comfort',
-      name: 'Konfor Modu',
-      icon: 'home',
-      color: '#F38181',
-      description: 'Optimal yaşam alanı',
-      sensors: ['temperature', 'humidity'],
-      actions: [
-        'Sıcaklığı 22-24°C arasında tut',
-        'Nem %40-60 arasında',
-        'Otomatik perde kontrolü (güneşe göre)'
-      ]
-    },
-    {
       id: 'energy_saving',
       name: 'Enerji Tasarrufu',
       icon: 'leaf',
@@ -87,7 +74,6 @@ const ModesScreen = ({ onNavigate }) => {
       sensors: ['motion', 'light'],
       actions: [
         '5 dk hareket yoksa ışıkları kapat',
-        'Klimayı eko modda çalıştır',
         'Kullanılmayan cihazları kapat'
       ]
     },
@@ -101,7 +87,6 @@ const ModesScreen = ({ onNavigate }) => {
       actions: [
         'Perdeleri yavaşça aç',
         'Işıkları kademeli aç',
-        'Klimayı 22°C ayarla'
       ]
     },
     {
@@ -197,11 +182,11 @@ const ModesScreen = ({ onNavigate }) => {
     if (isActive) {
       // Modu kapat
       setModes(modes.filter(id => id !== modeId));
-      Alert.alert('✓', 'Mod devre dışı bırakıldı');
+      
     } else {
       // Modu aç
       setModes([...modes, modeId]);
-      Alert.alert('✓', 'Mod aktif edildi');
+      
     }
   };
 
@@ -389,7 +374,7 @@ const styles = StyleSheet.create({
 
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#ffffff',
     marginBottom: 4,

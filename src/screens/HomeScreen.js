@@ -68,17 +68,7 @@ const HomeScreen = ({ onNavigate }) => {
         </View>
       ) : (
         <>
-          {/* İstatistikler */}
-          {/* <View style={styles.statsContainer}> */}
-            {/* <View style={styles.statCard}>
-              <Text style={styles.statValue}>{activeDevices}/{totalDevices}</Text>
-              <Text style={styles.statLabel}>Aktif Cihazlar</Text>
-            </View> */}
-            {/* <View style={styles.statCard}>
-              <Text style={styles.statValue}>{sensors.length}</Text>
-              <Text style={styles.statLabel}>Sensörler</Text>
-            </View>
-          </View> */}
+         
 
           {/* Hızlı Erişim */}
           <View style={styles.section}>
@@ -171,6 +161,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+
   },
   statValue: {
     fontSize: 32,

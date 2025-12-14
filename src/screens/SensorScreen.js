@@ -118,9 +118,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#ffffff',
+    marginBottom: 4,
   },
   autoRefreshButton: {
     paddingHorizontal: 12,

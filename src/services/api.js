@@ -16,7 +16,7 @@ class ApiService {
         value: 23.5,
         unit: '°C',
         icon: '🌡️',
-        room: 'Odalar',
+        room: 'Veriler',
         timestamp: new Date().toISOString(),
       },
       {
@@ -25,7 +25,7 @@ class ApiService {
         value: 45,
         unit: '%',
         icon: '💧',
-        room: 'Odalar',
+        room: 'Veriler',
         timestamp: new Date().toISOString(),
       },
       {
@@ -34,7 +34,7 @@ class ApiService {
         value: false,
         unit: '',
         icon: '💃🏼',
-        room: 'Ana Kapı',
+        room: 'Veriler',
         timestamp: new Date().toISOString(),
       },
       {
@@ -43,7 +43,7 @@ class ApiService {
         value: 0,
         unit: 'ppm',
         icon: '⛽',
-        room: 'Mutfak',
+        room: 'Veriler',
         timestamp: new Date().toISOString(),
       },
     ];

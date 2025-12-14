@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   name: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '600',
     color: '#333',
     marginBottom: 4,
