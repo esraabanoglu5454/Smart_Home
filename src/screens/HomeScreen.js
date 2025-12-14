@@ -133,8 +133,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    backgroundColor: '#301934',
-    padding: 24,
+    backgroundColor: '#44436A',
+    padding: 20,
     paddingTop: 16,
   },
   title: {
