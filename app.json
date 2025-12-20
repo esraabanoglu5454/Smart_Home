@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "mobile-app",
-    "slug": "mobile-app",
+    "slug": "smarthomemobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +20,17 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.muhammedkolee.smarthomemobileapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "985046b0-424a-4186-966f-38b7059eba41"
+      }
+    },
+    "owner": "muhammedkolee"
   }
 }
