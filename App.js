@@ -7,6 +7,8 @@ import DeviceControlScreen from './src/screens/DeviceControlScreen';
 import SensorScreen from './src/screens/SensorScreen';
 import ModesScreen from './src/screens/HomeScreen';
 import NavigationBar from './src/components/NavigationBar';
+import AiToggleButton from './src/components/AiToggleButton';
+import AiAgentScreen from './src/screens/AiAgentScreen';
 import { connectMQTT } from './src/services/mqttService';
 
 export default function App() {
@@ -92,6 +94,8 @@ export default function App() {
         return <SensorScreen onNavigate={setCurrentScreen} />;
       case 'modes':
         return <ModesScreen onNavigate={setCurrentScreen} />;
+      case 'ai':
+        return <AiAgentScreen onNavigate={setCurrentScreen} />;
       default:
         return <HomeScreen onNavigate={setCurrentScreen} />;
     }
@@ -103,6 +107,9 @@ export default function App() {
       <View style={styles.content}>
         {renderScreen()}
       </View>
+      {currentScreen !== 'ai' && (
+        <AiToggleButton onPress={() => setCurrentScreen('ai')} />
+      )}
       <NavigationBar currentScreen={currentScreen} onNavigate={setCurrentScreen} />
     </SafeAreaView>
   );
